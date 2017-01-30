@@ -1,3 +1,436 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, html{
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased !important;
+	min-height: 100%;
+	min-width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: black;
+}
+
+h1{
+	text-transform: uppercase;
+}
+
+h1 strong{
+	font-weight: 900;
+}
+
+h2{
+	text-transform: uppercase;
+	line-height: 20px;
+	margin:  0;
+}
+
+h3{
+	font-size: 18px;
+	font-weight: 900;
+}
+
+h4{
+	text-transform: uppercase;
+}
+
+h5{
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 20px;
+}
+
+p{
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul, ol {
+	padding: 0;
+	webkit-padding: 0;
+	moz-padding: 0;
+}
+
+.goldtext {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight:bold;
+	-webkit-margin-before: 0.3em; 
+	-webkit-margin-after: 0.2em;
+	background-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	text-shadow: -0.02em -0.03em 0.005em rgba(255, 255, 0, 0.56);
+	font-size: 25px;
+}
+
+#container {
+	height: 100%;
+	width: 100%;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	border: 0;
+	background-color: black;
+}
+
+#navigation {
+	min-height: 130px;
+	max-height: 150px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;
+	background-color: black;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#logo {
+	height: 130px;
+	max-width: 20%;
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	float: left;
+}
+
+#menu {
+	height: 100px;
+	min-width: 78%;
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+	border-bottom: 3px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #E0CF00 0%, #A86800 100%);
+	-webkit-border-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	border-image: linear-gradient(to right, #E0CF00 0%, #A86800 100%);
+	border-image-slice: 1;
+}
+
+.navoptions ul {
+	width: 90%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navoptions li {
+	display: inline;
+	float: right;
+	overflow-x: hidden;
+}
+
+.navoptions a {
+	padding: 10px;
+	display: block;
+	color: white;
+	text-align: center;
+	padding-left: 25px;
+	padding-right: 50px;
+	padding-top: 45px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.navoptions a:hover {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	text-shadow: -0.02em -0.03em 0.005em rgba(255, 255, 0, 0.56);
+}
+
+#scrollmenu {
+	height: 0px;
+	width: 0px;
+	visibility: hidden;
+}
+
+#content {
+	min-height: 700px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: #E0E0E0;
+	display: block;
+	overflow: hidden;
+}
+
+#splash {
+	max-height: 700px;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+#splash img {
+	min-height: 500px;
+	max-height: 100%;
+	min-width: 500px;
+	max-width: 100%;
+}
+
+#sectionbanner {
+	height: 45px;
+	width: 100%;
+	border: 0;
+	box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	text-align: center;
+	background-color: black;
+	border-bottom: 3px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #E0CF00 0%, #A86800 100%);
+	-webkit-border-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	border-image: linear-gradient(to right, #E0CF00 0%, #A86800 100%);
+	border-image-slice: 1;
+}
+
+#listings {
+	height: 33%;
+	width: 100%;
+	margin-left: 3%;
+	margin-right: 3%;
+	padding: 10px;
+	overflow: hidden;
+}
+
+#listing {
+	height: 400px;
+	width: 30%;
+	padding: 5px;
+	border-bottom: 10px solid white;
+	border-radius: 3px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	background-color: white;
+	text-align: center;
+	position: relative;
+	overflow-y: scroll;
+	display: inline-block;
+}
+
+#listing::-webkit-scrollbar {
+	display: none;
+}
+
+#listimage {
+	height: 50%;
+	width: 100%;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	display: block;
+}
+
+#listimage img {
+	max-height: 100%;
+	max-width: 100%;
+	border-radius: 3px;
+}
+
+#listtext {
+	padding: 5px;
+	display: block;
+}
+
+#team {
+	height: 33%;
+	width: 100%;
+	padding: 10px;
+	overflow: hidden;
+}
+
+#teammember {
+	padding: 20px;
+	text-align: center;
+}
+
+#teammember img {
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
+	border: 5px solid white;
+	border-radius: 5px;
+	box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	background-color: white;
+}
+
+#teammember h2 {
+	padding-top: 20px;
+}
+
+#teammember p {
+	padding: 10px;
+}
+
+#contact {
+	min-width: 100%;
+	padding: 10px;
+	float: none;
+	display: inline-block;
+	text-decoration: none;
+}
+
+#contacttext {
+	padding: 30px;
+	float: left;
+}
+
+#contacttext ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#contacttext a {
+	padding: 10px;
+	color: black;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#media {
+	padding: 10px;
+	padding-right: 30px;
+	float: right;
+	display: inline-block;
+}
+
+#media ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#media li {
+	display: inline;
+}
+
+#article {
+	padding: 35px;
+	overflow: scroll;
+}
+
+#article::-webkit-scrollbar {
+	display: none;
+}
+
+#listingphotos ul {
+	width: 90%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#listingphotos li {
+	display: inline;
+	float: left;
+}
+
+#listingphotos img {
+	max-height: 200px;
+	max-width: 300px;
+	padding: 10px;
+	display: block;
+	margin: 5px;
+	padding: 0;
+	border: 5px solid white;
+	border-radius: 3px;
+	box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+}
+
+#listingnotes {
+	width: 100%;
+}
+
+#foot {
+	min-height: 32px;
+	width: 100%;
+	margin: 0;
+	padding-bottom: 30px;
+	border: 0;
+	border-bottom: 3px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #E0CF00 0%, #A86800 100%);
+	-webkit-border-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	border-image: linear-gradient(to right, #E0CF00 0%, #A86800 100%);
+	border-image-slice: 1;
+	color: white;
+}
+
+#footmenu {
+	width: 48%;
+	float: left;
+}
+
+#footmenu .navoptions li {
+	display: inline;
+	float: left;
+}
+
+#footmenu .navoptions a {
+	padding: 10px;
+	font-size: 18px;
+}
+
+#footinfo {
+	width: 48%;
+	padding-top: 15px;
+	padding-right: 2%;
+	float: right;
+	font-size: 18px;
+	text-align: right;
+}
+
+.button-left {
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  background: #000000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position: absolute;
+  left: 0px;
+  top: 300px;
+}
+
+.button-left:hover {
+  background: #999999;
+  background-image: -webkit-linear-gradient(top, #999999, #545454);
+  background-image: -moz-linear-gradient(top, #999999, #545454);
+  background-image: -ms-linear-gradient(top, #999999, #545454);
+  background-image: -o-linear-gradient(top, #999999, #545454);
+  background-image: linear-gradient(to bottom, #999999, #545454);
+  text-decoration: none;
+}
+
+.button-right {
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  background: #000000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position: absolute;
+  right: 0px;
+  top: 300px;
+}
+
+.button-right:hover {
+  background: #999999;
+  background-image: -webkit-linear-gradient(top, #999999, #545454);
+  background-image: -moz-linear-gradient(top, #999999, #545454);
+  background-image: -ms-linear-gradient(top, #999999, #545454);
+  background-image: -o-linear-gradient(top, #999999, #545454);
+  background-image: linear-gradient(to bottom, #999999, #545454);
+  text-decoration: none;
+}
