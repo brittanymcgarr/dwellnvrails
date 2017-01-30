@@ -3,14 +3,12 @@
 
 <head>
 	<!-- Meta data -->
-	<meta charset="UTF-8">
-	<title>dwellNV - About Us</title>
+	<title><%= full_title(yield(:title)) %></title>
 	
-	<!-- Stylesheet data -->
-	<link rel="stylesheet" type="text/css"  href="styles/style.css">
-	
-	<!-- Javascript data -->
-	<!-- <script type="text/javascript" src="javascript/custom.js"></script> -->
+	<%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 

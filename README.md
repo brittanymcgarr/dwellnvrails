@@ -26,3 +26,13 @@ Rails local server:
 ```
 $ rails server
 ```
+
+Heroku from Branch:
+
+```
+$ git checkout master
+$ git merge static-pages
+$ git push
+$ rails test
+$ git push heroku
+```
