@@ -1,24 +1,28 @@
-# README
+# dwellNV Rails App
+For organizing and managing listings and clients.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Commands
 
-Things you may want to cover:
+Gem bundle install without production:
 
-* Ruby version
+```
+$ bundle install --without production
+```
 
-* System dependencies
+Database migration:
 
-* Configuration
+```
+$ rails db:migrate
+```
 
-* Database creation
+Rails testing suite:
 
-* Database initialization
+```
+$ rails test
+```
 
-* How to run the test suite
+Rails local server:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails server
+```
