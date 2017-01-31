@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dwellnvrails</title>
-    <%= csrf_meta_tags %>
+	  <!-- Meta data -->
+  	<title><%= full_title(yield(:title)) %></title>
+  	
+  	<%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%= render 'layouts/shim' %>
+    
   </head>
 
   <body>
-    <%= yield %>
+      
+      <div id="container">
+    	
+    	  <!-- Navigation Menu -->
+      	<%= render 'layouts/navigation' %>
+      	
+      	<!-- Content of the page -->
+        <%= yield %>
+        
+          	
+      	<!-- Footer -->
+      	<%= render 'layouts/footer' %>
+    	
+      </div>
+  
   </body>
+  
 </html>

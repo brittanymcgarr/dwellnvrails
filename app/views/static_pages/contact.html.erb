@@ -1,176 +1,103 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<!-- Meta data -->
-	<title><%= full_title(yield(:title)) %></title>
+<!-- Main wrapper for the articles -->
+<div id="content">
 	
-	<%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-
-
-<body>
-	<div id="container">
-		<a name="top"></a>
-		<!-- Navigation panel for the logo and menu options along the top -->
-		<div id="navigation">
-			<div id="logo">
-				<a href="index.html"><img src="images/dwellNV.png" height="125" width="275"></a></img>
-			</div>
-			
-			<!-- Fixed menu at the top of the screen -->
-			<div id="menu">
-				<ul class="navoptions">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="listings.html">Listings</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="renobb.html">Reno's Best Buys</a></li>
-				</ul>
-			</div>
-			
-			<!-- Scrolling menu -->
-			<div id="scrollmenu">
-				<ul class="scrolloptions">
-					<li><a href="#">Top</a></li>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Listings</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
-		</div>
+	<!-- View panel for the splash image -->
+	<div id="splash">
+		<%= image_tag("smartphone.jpg") %>
+	</div>
 	
-		<!-- Main wrapper for the articles -->
-		<div id="content">
+	<div id="sectionbanner">
+		<p class="goldtext">
+			For General Questions
+		</p>
+	</div>
+	
+	<!-- Article -->
+	<div id="article">
+		<p>
+			<h3>
+				Phone:
+			</h3>
+			<h2>
+				(775) 830-6036
+			</h2>
+			<h3>
+				Email:
+			</h3>
+			<h2>
+				michelle@dwellNV.com
+			</h2>
 			
-			<!-- View panel for the splash image -->
-			<div id="splash">
-				<img src="images/smartphone.jpg"></img>
-			</div>
-			
-			<div id="sectionbanner">
-				<p class="goldtext">
-					For General Questions
-				</p>
-			</div>
-			
-			<!-- Article -->
-			<div id="article">
-				<p>
-					<h3>
-						Phone:
-					</h3>
-					<h2>
-						(775) 830-6036
-					</h2>
-					<h3>
-						Email:
-					</h3>
-					<h2>
-						michelle@dwellNV.com
-					</h2>
-					
-					<h3>
-						Address:
-					</h3>
-					<h2>
-						4950 Kietzke Lane
-						STE #302-A
-						Reno, NV 89509
-					</h2>
-				</p>
-			</div>
-			
-			<div id="sectionbanner">
-				<p class="goldtext">
-					Contact a Realtor
-				</p>
-			</div>
-			
-			<!-- Wrapper for the team panel -->
-			<div id="team">
-				<div id="teammember">
-					<img src="images/mward.png"></img>
-				
-					<h2>
-						Michelle Ward
-					</h2>
-					
-					<p>
-						<h3>
-							Phone:
-							(775) 830-6036
-							<br>
-							Email:
-							michelle@dwellNV.com
-						</h3>
-					</p>
-				</div>
-			</div>
-			
-			<div id="sectionbanner">
-				<p class="goldtext">
-					Contact Us Today!
-				</p>
-			</div>
-			
-			<!-- Wrapper for the contact panel -->
-			<div id="contact">
-				<div id="contacttext">
-					<ul>
-						<li>Phone: (775) 830-6036</li>
-						<li>Address: 4950 Kietzke Lane STE #302-A, Reno, NV 89509</li>
-						<li>Email: michelle@dwellNV.com</li>
-					</ul>
-				</div>
-				
-				<!-- Media icons -->
-				<div id="media">
-					<ul>
-						<li>
-							<a href="#">
-								<img src="images/twitter.png"></img>
-							</a>
-						</li>
-						
-						<li>
-							<a href="#">
-								<img src="images/facebook.png"></img>
-							</a>
-						</li>
-						
-						<li>
-							<a href="#">
-								<img src="images/instagram.png"></img>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
+			<h3>
+				Address:
+			</h3>
+			<h2>
+				4950 Kietzke Lane
+				STE #302-A
+				Reno, NV 89509
+			</h2>
+		</p>
+	</div>
+	
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Contact a Realtor
+		</p>
+	</div>
+	
+	<!-- Wrapper for the team panel -->
+	<div id="team">
+		<div id="teammember">
+			<%= image_tag("mward.png") %>
 		
-		<!-- Footer -->
-		<div id="foot">
-			<div id="footmenu">
-				<ul class="navoptions">
-					<li><a href="#top">Top</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="listings.html">Listings</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="renobb.html">Reno's Best Buys</a></li>
-				</ul>
-			</div>
+			<h2>
+				Michelle Ward
+			</h2>
 			
-			<div id="footinfo">
-				<p>dwellNV &copy; 2016 Michelle Ward </p>
-			</div>
+			<p>
+				<h3>
+					Phone:
+					(775) 830-6036
+					<br>
+					Email:
+					michelle@dwellNV.com
+				</h3>
+			</p>
 		</div>
 	</div>
-</body>
-
-</html>
+	
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Contact Us Today!
+		</p>
+	</div>
+	
+	<!-- Wrapper for the contact panel -->
+	<div id="contact">
+		<div id="contacttext">
+			<ul>
+				<li>Phone: (775) 830-6036</li>
+				<li>Address: 4950 Kietzke Lane STE #302-A, Reno, NV 89509</li>
+				<li>Email: michelle@dwellNV.com</li>
+			</ul>
+		</div>
+		
+		<!-- Media icons -->
+		<div id="media">
+			<ul>
+				<li>
+					<%= link_to image_tag("twitter.png"), '#' %>
+				</li>
+				
+				<li>
+					<%= link_to image_tag("facebook.png"), '#' %>
+				</li>
+				
+				<li>
+					<%= link_to image_tag("instagram.png"), '#' %>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
