@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # Routes and aliases for static pages
   get  '/contact', to: 'static_pages#contact'
   
@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get '/renobb', to: 'static_pages#renobb'
   
   get '/listings', to: 'static_pages#listings'
+  
+  # Users management
+  get '/signup', to: 'users#new'
 
   # Root route
   root 'static_pages#home'
