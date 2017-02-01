@@ -35,6 +35,7 @@ $ git merge static-pages
 $ git push
 $ rails test
 $ git push heroku
+$ heroku run rails db:migrate
 ```
 
 Rails Active Record (db commands):
