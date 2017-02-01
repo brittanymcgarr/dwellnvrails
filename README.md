@@ -36,3 +36,37 @@ $ git push
 $ rails test
 $ git push heroku
 ```
+
+Rails Active Record (db commands):
+
+Rails Console (Sandbox mode):
+```
+$ rails console --sandbox
+```
+
+Creating a new User:
+```
+$ user = User.new(name:"Name", email:"email@email.com")
+$ user.save
+
+-or-
+$ user = User.create(name: "Name", email: "email@email.com")
+```
+
+Destroying a User entry:
+```
+$ user.destroy
+```
+
+Checking validity:
+```
+$ user.valid?
+```
+
+Finding User:
+```
+$ User.find(1)
+$ User.find_by(name: "Name")
+$ User.first
+$ User.all
+```
