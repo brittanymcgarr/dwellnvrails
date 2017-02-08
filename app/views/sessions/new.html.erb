@@ -1,0 +1,38 @@
+<% provide(:title, 'Log In') %>
+
+<div id="content">
+    
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Log In
+		</p>
+	</div>
+	
+	<!-- Article -->
+	<div id="article">
+		
+		<div class="form">
+		    
+		    <%= form_for(:session, url: login_path) do |form| %>
+		      <br>
+              <%= form.label :email %>
+              <br>
+              <%= form.email_field :email, class: 'form-control' %>
+    
+              <br>
+              <%= form.label :password %>
+              <br>
+              <%= form.password_field :password, class: 'form-control' %>
+                
+              <br>
+              <%= form.submit "Log In", class: "button" %>
+            <% end %>
+		
+		</div>
+		
+		<br>
+		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+		
+	</div>
+    
+</div>

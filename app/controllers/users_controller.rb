@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     # If successfully saved, redirect the user to their dashboard
     if @user.save
       flash[:success] = "Welcome to dwellNV!"
+      log_in @user
       redirect_to @user
     else
       render 'new'

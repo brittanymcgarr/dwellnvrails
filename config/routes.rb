@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   # Routes and aliases for static pages
   get  '/contact', to: 'static_pages#contact'
   
@@ -13,6 +15,13 @@ Rails.application.routes.draw do
   
   # Users management
   get '/signup', to: 'users#new'
+  
+  # Session controller for Login/Logout
+  get    '/login',   to: 'sessions#new'
+  
+  post   '/login',   to: 'sessions#create'
+  
+  delete '/logout',  to: 'sessions#destroy'
 
   # Root route
   root 'static_pages#home'
