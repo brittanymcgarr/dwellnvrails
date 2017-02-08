@@ -435,3 +435,78 @@ ul, ol {
   background-image: linear-gradient(to bottom, #999999, #545454);
   text-decoration: none;
 }
+
+// Debug Console styling
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+  background-color: white;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+// Forms
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  width: 60%;
+  margin-bottom: 15px;
+  font-size: 24px;
+  @include box_sizing;
+}
+
+input {
+  height: 42px !important;
+}
+
+.button {
+	width: 225px;
+    background-color: #494949;
+    border: none;
+    color: white;
+    padding: 15px;
+    line-height: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+}
+
+#error_explanation {
+  color: red;
+  padding: 10px;
+  margin-left: 10px;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+    padding-left: 30px;
+  }
+}
+
+.alert {
+	width: 50%;
+	height: 32px;
+	background-color: #FFDCD8;
+	border-radius: 3px;
+	border: 1px solid red;
+	margin: 5px;
+	font-size: 24px;
+}

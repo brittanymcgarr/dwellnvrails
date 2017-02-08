@@ -4,15 +4,41 @@
     
 	<div id="sectionbanner">
 		<p class="goldtext">
-			Sign Up Today!
+			Sign Up!
 		</p>
 	</div>
 	
 	<!-- Article -->
 	<div id="article">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed malesuada tortor. Quisque elementum tincidunt erat ut placerat. Integer fermentum neque ut justo venenatis sollicitudin. Nulla vestibulum tortor ipsum, ut semper purus molestie at. Quisque lacinia odio ac risus facilisis, sed convallis diam aliquet. Proin molestie pulvinar augue fringilla lacinia. Duis porta tortor ut tortor lobortis, et sagittis quam eleifend. Suspendisse malesuada libero a tortor malesuada iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tristique scelerisque finibus. Cras eget risus dui. Mauris dictum vulputate diam, nec lacinia nibh vehicula vitae. Mauris lobortis volutpat auctor. Sed faucibus viverra lorem non vestibulum.
-		</p>
+		
+		<div class="form">
+			<%= form_for(@user) do |form| %>
+				<%= render 'shared/error_messages' %>
+	
+				<%= form.label :name %>
+				<br>
+				<%= form.text_field :name, class: 'form-control' %>
+	
+				<br>
+				<%= form.label :email %>
+				<br>
+				<%= form.email_field :email, class: 'form-control' %>
+	
+				<br>
+				<%= form.label :password %>
+				<br>
+				<%= form.password_field :password, class: 'form-control' %>
+	
+				<br>
+				<%= form.label :password_confirmation %>
+				<br>
+				<%= form.password_field :password_confirmation, class: 'form-control' %>
+	
+				<br>
+				<%= form.submit "Create Account", class: "button" %>
+			<% end %>
+		</div>
+		
 	</div>
     
 </div>

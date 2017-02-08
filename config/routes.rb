@@ -16,5 +16,8 @@ Rails.application.routes.draw do
 
   # Root route
   root 'static_pages#home'
+  
+  # Resources
+  resources :users
 
 end
