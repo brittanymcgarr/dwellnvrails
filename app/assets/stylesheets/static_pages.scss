@@ -510,3 +510,19 @@ input {
 	margin: 5px;
 	font-size: 24px;
 }
+
+.checkbox {
+	width: 30px;
+	height: 30px;
+  margin: 0;
+  padding: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}

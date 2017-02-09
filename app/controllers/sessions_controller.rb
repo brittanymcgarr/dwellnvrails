@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     # User authentication handles the seeded lookup and confirmation
     if user && user.authenticate(params[:session][:password])
       log_in user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to user
     else
       # Create an error message
@@ -19,7 +20,10 @@ class SessionsController < ApplicationController
 
   # Calls the log_out session helper method to destroy the session
   def destroy
-    log_out
+    if(logged_in?)
+      log_out
+    end
+    
     redirect_to root_url
   end
 end
