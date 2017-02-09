@@ -1,9 +1,10 @@
 class User < ApplicationRecord
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    VALID_PHONE_REGEX = /(\(*(\d{3})\)|(\d{3}-)|(\d{3}))\s*(\d{3})-*(\d{4})/ 
     
     attr_accessor :remember_token
     
-    # Conver the emails to lowercase
+    # Convert the emails to lowercase
     before_save { self.email = email.downcase }
     
     # Users must submit a non-empty string for name attribute
@@ -12,6 +13,9 @@ class User < ApplicationRecord
     # Must have valid email format, too
     validates(:email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, 
                     uniqueness: { case_sensitive: false })
+                    
+    # Validate phone formats
+    validates(:primary_phone, presence: true, length: {minimum: 10, maximum: 15}, format: { with: VALID_PHONE_REGEX })
                     
     # Ensure password hashing
     has_secure_password

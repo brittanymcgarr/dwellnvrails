@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   # Ensure user parameters are only for non-admin users
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :primary_phone, :password, :password_confirmation)
     end
 end

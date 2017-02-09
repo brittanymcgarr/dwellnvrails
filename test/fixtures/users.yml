@@ -1,4 +1,5 @@
 example:
   name: Michelle Example
   email: michelle@example.com
+  primary_phone: '555-555-5555'
   password_digest: <%= User.digest('password') %>
