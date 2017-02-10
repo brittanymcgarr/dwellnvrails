@@ -526,3 +526,58 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+/* User Listings styling */
+
+.userslisting {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.pagination {
+	height: 32px;
+	min-width: 100%;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	border-bottom: 3px solid transparent;
+	-moz-border-image: -moz-linear-gradient(left, #E0CF00 0%, #A86800 100%);
+	-webkit-border-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	border-image: linear-gradient(to right, #E0CF00 0%, #A86800 100%);
+	border-image-slice: 1;
+	background-color: black;
+}
+
+.pagination ul {
+	width: 90%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pagination li {
+	display: inline;
+	float: left;
+	overflow-x: hidden;
+}
+
+.pagination a {
+	padding: 10px;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.pagination a:hover {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	text-shadow: -0.02em -0.03em 0.005em rgba(255, 255, 0, 0.56);
+}

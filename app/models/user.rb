@@ -21,7 +21,7 @@ class User < ApplicationRecord
     has_secure_password
     
     # Password string should have a minimum length of 6
-    validates(:password, presence: true, length: { minimum: 6 })
+    validates(:password, presence: true, length: { minimum: 6 }, allow_nil: true)
     
     # Returns the hash digest of the given string
     def User.digest(string)

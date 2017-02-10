@@ -1,0 +1,37 @@
+<% provide(:title, 'Users Directory') %>
+
+<div id="content">
+    
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Users Directory
+		</p>
+	</div>
+	
+	<div id="article">
+	
+    	<% if current_user.admin? %>
+    	    <%= will_paginate %>
+    	    <br>
+    	    <ul class="userslisting">
+    	        
+    	        <% @users.each do |user| %>
+                    <li>
+                      <%= link_to user.name, user %>
+                      
+                      <!-- Display delete option only if admin -->
+                      <% if current_user.admin? && !current_user?(user) %>
+                        | <%= link_to "delete", user, method: :delete,
+                                                  data: { confirm: "You sure?" } %>
+                      <% end %>
+                    </li>
+                <% end %>
+    	        
+    	    </ul>
+    	    <%= will_paginate %>
+    	<% else %>
+    	    <h2>We're sorry. Only admins may view this page.</h2>
+    	<% end %>
+    	
+	</div>
+</div>

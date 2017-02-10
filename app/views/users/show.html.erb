@@ -1,32 +1,55 @@
 <% provide(:title, "User Profile") %>
 
 <div id="content">
-    
-	<div id="sectionbanner">
-		<p class="goldtext">
-			<%= @user.name %>
-		</p>
-	</div>
-	
-	<div id="article">
-		<!-- Add user information when refined -->
-		<h2>
-			Primary Phone:
-		</h2>
-		<p>
-			<%= @user.primary_phone %>
-		</p>
-	</div>
-	
-	<div id="sectionbanner">
-		<p class="goldtext">
-			Favorite Listings
-		</p>
-	</div>
-	
-	<!-- Article -->
-	<div id="article">
-		<!-- Add user's listings when finished -->
-	</div>
-    
+    <% if current_user.admin? || current_user?(@user) %>
+		<div id="sectionbanner">
+			<p class="goldtext">
+				<%= @user.name %>
+			</p>
+		</div>
+		
+		<div id="article">
+			<!-- Add user information when refined -->
+			<h2>
+				Primary Phone:
+			</h2>
+			<p>
+				<%= @user.primary_phone %>
+			</p>
+			
+			<br>
+			<%= link_to "Edit", edit_user_path(current_user) %>
+		</div>
+		
+		<!-- Make this admin-only -->
+		<% if current_user.admin? %>
+			<div id="sectionbanner">
+				<p class="goldtext">
+					Clients
+				</p>
+			</div>
+			
+			<div id="article">
+				<%= link_to "List All Users", users_path %>
+			</div>
+		<% end %>
+		
+		<div id="sectionbanner">
+			<p class="goldtext">
+				Favorite Listings
+			</p>
+		</div>
+		
+		<!-- Article -->
+		<div id="article">
+			<!-- Add user's listings when finished -->
+		</div>
+    <% else %>
+    	<div id="article">
+    		<h2>We're Sorry</h2>
+    		<p>
+    			You may only view your own profile. Contact and administrator if you have reached this message in error.
+    		</p>
+    	</div>
+    <% end %>
 </div>
