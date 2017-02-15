@@ -1,0 +1,14 @@
+Greetings, <%= @user.name %>,
+
+Welcome to dwellNV!
+
+To get started, you need to activate your account with the link below:
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
+Your account will keep track of your favorite listings, provide contact for one
+of our amazing realtors, and keep you up to date on the market.
+
+From the team at dwellNV,
+Thank you, and Welcome Home!
+
+Please do not reply to this email address.

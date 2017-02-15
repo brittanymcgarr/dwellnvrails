@@ -71,7 +71,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?('')
+    assert_not @user.authenticated?(:remember, '')
   end
   
   test "primary_phone should have proper format" do
@@ -83,5 +83,4 @@ class UserTest < ActiveSupport::TestCase
       assert @user.valid?, "#{valid_phone.inspect} should be valid"
     end
   end
-  
 end
