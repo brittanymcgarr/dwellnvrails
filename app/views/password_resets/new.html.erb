@@ -1,0 +1,32 @@
+<% provide(:title, 'Forgot Password') %>
+
+<div id="content">
+    
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Reset Password
+		</p>
+	</div>
+	
+	<!-- Article -->
+	<div id="article">
+
+        <h2>Send an Email to Reset Your Password?</h2>
+	    
+	    <div class="form">
+	        <%= form_for(:password_reset, url: password_resets_path) do |form| %>
+	        
+	            <br>
+	            <%= form.label :email %>
+	            <br>
+	            <%= form.email_field :email, class: 'form-control' %>
+	            
+	            <br>
+	            <%= form.submit "Submit", class: "button" %>
+	            
+	        <% end %>
+	    </div>
+	    
+	</div>
+
+</div>
