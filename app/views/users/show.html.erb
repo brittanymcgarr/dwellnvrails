@@ -17,6 +17,13 @@
 				<%= @user.primary_phone %>
 			</p>
 			
+			<h2>
+				Email:
+			</h2>
+			<p>
+				<%= @user.email %>
+			</p>
+			
 			<br>
 			<%= link_to "Edit", edit_user_path(current_user) %>
 		</div>
@@ -34,21 +41,51 @@
 			</div>
 		<% end %>
 		
+		<% if current_user.admin? %>
+			<div id="sectionbanner">
+				<p class="goldtext">
+					My Listings
+				</p>
+			</div>
+			
+			<!-- User's Owned Listings -->
+			<div id="article">
+				<% if @user.listings.any? %>
+					<ol class="listings">
+						<%= render @ownlistings %>
+					</ol>
+					<%= will_paginate @ownlistings %>
+				<% end %>
+			
+				<!-- Go to create a new listing -->
+				<br>
+				<%= link_to "Create a New Listing", listings_new_path %>
+			
+			</div>
+			
+		<% end %>
+		
 		<div id="sectionbanner">
 			<p class="goldtext">
 				Favorite Listings
 			</p>
 		</div>
 		
-		<!-- Article -->
+		<!-- User's Favorite Listings -->
 		<div id="article">
-			<!-- Add user's listings when finished -->
+			<% if @user.listings.any? %>
+				<ol class="listings">
+					<%= render @listings %>
+				</ol>
+				<%= will_paginate @listings %>
+			<% end %>
 		</div>
+			
     <% else %>
     	<div id="article">
     		<h2>We're Sorry</h2>
     		<p>
-    			You may only view your own profile. Contact and administrator if you have reached this message in error.
+    			You may only view your own profile. Contact an administrator if you have reached this message in error.
     		</p>
     	</div>
     <% end %>

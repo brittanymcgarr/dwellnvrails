@@ -56,23 +56,15 @@ class UsersController < ApplicationController
   # Display queried user information
   def show
     @user = User.find(params[:id])
+    @ownlistings = @user.listings.where.not("listing_status LIKE ?", "deleted").order(:created_at).paginate(page: params[:page])
+    @listings = @user.listings.where.not("listing_status LIKE ?", "deleted").paginate(page: params[:page])
   end
   
   # Ensure user parameters are only for non-admin users
   private
     # Confirms valid user parameters
     def user_params
-      params.require(:user).permit(:name, :email, :primary_phone, :password, 
-                                    :password_confirmation)
-    end
-    
-    # Confirms current logged-in user
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in to access this page."
-        redirect_to login_url
-      end
+      params.require(:user).permit(:name, :email, :primary_phone, :password, :password_confirmation)
     end
     
     # Ensure accessing users is correct user

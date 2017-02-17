@@ -28,3 +28,33 @@ User.create!(name:  "Example User",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(6)
+5.times do
+  description = Faker::Lorem.sentence(200)
+  street_address = "123 Place Street"
+  city = "Reno"
+  state = "NV"
+  zip_code = "89511"
+  primary_contact = "(555)123-4567"
+  secondary_contact = "555-555-5555"
+  listing_status = "active"
+  users.each { |user| user.listings.create!(description: description, street_address: street_address,
+                                            city: city, state: state, zip_code: zip_code, primary_contact: primary_contact,
+                                            secondary_contact: secondary_contact, listing_status: listing_status) }
+end
+
+users = User.order(:created_at).take(2)
+2.times do
+  description = Faker::Lorem.sentence(200)
+  street_address = "123 Place Street"
+  city = "Reno"
+  state = "NV"
+  zip_code = "89512"
+  primary_contact = "(555)123-4567"
+  secondary_contact = "555-555-5555"
+  listing_status = "active"
+  users.each { |user| user.listings.create!(description: description, street_address: street_address,
+                                            city: city, state: state, zip_code: zip_code, primary_contact: primary_contact,
+                                            secondary_contact: secondary_contact, listing_status: listing_status) }
+end

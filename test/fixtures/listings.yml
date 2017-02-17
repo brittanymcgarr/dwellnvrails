@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id nulla sed enim porta gravida. Donec laoreet a diam quis pharetra. Proin mollis tellus ex, vel vulputate quam luctus id. In feugiat a massa id facilisis. Suspendisse at dui ut mi commodo eleifend at nec augue. Duis a tempor velit. Cras vel pulvinar lectus, congue convallis urna. Duis tempor at felis quis tincidunt. Etiam vitae lectus sit amet arcu viverra elementum. Suspendisse arcu quam, blandit id viverra hendrerit, laoreet vitae nunc. Nulla convallis erat a quam interdum, nec malesuada nibh cursus. Praesent nulla justo, iaculis ut erat non, sagittis maximus justo. Nam finibus vitae metus vitae cursus. Mauris quam ipsum, facilisis id lorem eu, rhoncus suscipit justo. Donec lobortis dapibus semper. Nunc varius, ante tempus volutpat imperdiet, nibh felis eleifend lectus, id maximus lacus nunc laoreet magna."
+  street_address: "123 Place Street"
+  city: "Reno"
+  state: "NV"
+  zip_code: "89511"
+  primary_contact: "(775)555-5555"
+  secondary_contact: "(555)555-5556"
+  listing_status: "active"
+  created_at: <%= 10.days.ago %>
+  user: 1
+
+two:
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id nulla sed enim porta gravida. Donec laoreet a diam quis pharetra. Proin mollis tellus ex, vel vulputate quam luctus id. In feugiat a massa id facilisis. Suspendisse at dui ut mi commodo eleifend at nec augue. Duis a tempor velit. Cras vel pulvinar lectus, congue convallis urna. Duis tempor at felis quis tincidunt. Etiam vitae lectus sit amet arcu viverra elementum. Suspendisse arcu quam, blandit id viverra hendrerit, laoreet vitae nunc. Nulla convallis erat a quam interdum, nec malesuada nibh cursus. Praesent nulla justo, iaculis ut erat non, sagittis maximus justo. Nam finibus vitae metus vitae cursus. Mauris quam ipsum, facilisis id lorem eu, rhoncus suscipit justo. Donec lobortis dapibus semper. Nunc varius, ante tempus volutpat imperdiet, nibh felis eleifend lectus, id maximus lacus nunc laoreet magna."
+  street_address: "456 Place Street"
+  city: "Reno"
+  state: "NV"
+  zip_code: "89511"
+  primary_contact: "(775)555-5555"
+  secondary_contact: "(555)555-5556"
+  listing_status: "active"
+  created_at: <%= 5.minutes.ago %>
+  user: 1
+
+most_recent:
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id nulla sed enim porta gravida. Donec laoreet a diam quis pharetra. Proin mollis tellus ex, vel vulputate quam luctus id. In feugiat a massa id facilisis. Suspendisse at dui ut mi commodo eleifend at nec augue. Duis a tempor velit. Cras vel pulvinar lectus, congue convallis urna. Duis tempor at felis quis tincidunt. Etiam vitae lectus sit amet arcu viverra elementum. Suspendisse arcu quam, blandit id viverra hendrerit, laoreet vitae nunc. Nulla convallis erat a quam interdum, nec malesuada nibh cursus. Praesent nulla justo, iaculis ut erat non, sagittis maximus justo. Nam finibus vitae metus vitae cursus. Mauris quam ipsum, facilisis id lorem eu, rhoncus suscipit justo. Donec lobortis dapibus semper. Nunc varius, ante tempus volutpat imperdiet, nibh felis eleifend lectus, id maximus lacus nunc laoreet magna."
+  street_address: "789 Place Street"
+  city: "Reno"
+  state: "NV"
+  zip_code: "89511"
+  primary_contact: "(775)555-5555"
+  secondary_contact: "(555)555-5556"
+  listing_status: "active"
+  created_at: <%= 1.minutes.ago %>
+  user: 1

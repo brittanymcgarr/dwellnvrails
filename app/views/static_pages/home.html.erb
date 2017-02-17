@@ -14,63 +14,9 @@
 	
 	<!-- Wrapper for the listings panel -->
 	<div id="listings">
-	
-		<div id="listing">
-			<div id="listimage">
-				<a href="listing01232017.html"><%= image_tag("craftsman.jpg") %></a>
-			</div>
-			
-			<div id="listtext">
-				<br>
-				<h2>
-					$234,000
-				</h2>
-				
-				<br>
-				<p>
-					<b>NEW LISTING!</b>
-					<br>3 BR 2 BA
-					<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id nulla sed enim porta gravida. Donec laoreet a diam quis pharetra. Proin mollis tellus ex, vel vulputate quam luctus id. In feugiat a massa id facilisis. Suspendisse at dui ut mi commodo eleifend at nec augue. Duis a tempor velit. Cras vel pulvinar lectus, congue convallis urna. Duis tempor at felis quis tincidunt. Etiam vitae lectus sit amet arcu viverra elementum. Suspendisse arcu quam, blandit id viverra hendrerit, laoreet vitae nunc. Nulla convallis erat a quam interdum, nec malesuada nibh cursus. Praesent nulla justo, iaculis ut erat non, sagittis maximus justo. Nam finibus vitae metus vitae cursus. Mauris quam ipsum, facilisis id lorem eu, rhoncus suscipit justo. Donec lobortis dapibus semper. Nunc varius, ante tempus volutpat imperdiet, nibh felis eleifend lectus, id maximus lacus nunc laoreet magna.
-				</p>
-			</div>
-		</div>
-		
-		<div id="listing">
-			<div id="listimage">
-				<a href="listing01232017.html"><%= image_tag("cabin.jpg") %></a>
-			</div>
-			
-			<div id="listtext">
-				<br>
-				<h2>
-					$200,000
-				</h2>
-				
-				<br>
-				<p>
-					3 BR 2 BA
-					<br>Morbi a mi tellus. Vivamus tincidunt diam ante, ut rutrum tortor bibendum vel. Suspendisse sed nibh imperdiet, tempus enim non, dapibus tortor. Donec justo nisi, viverra id semper sit amet, condimentum et magna. Vivamus efficitur metus at arcu consectetur gravida. Nullam laoreet erat in risus pretium viverra. Nunc bibendum mi quis metus condimentum accumsan. Nullam dui tortor, mattis vulputate odio quis, pretium eleifend nibh. Mauris vehicula euismod posuere. Nunc aliquet nibh felis, eget laoreet massa consequat vitae.
-				</p>
-			</div>
-		</div>
-		
-		<div id="listing">
-			<div id="listimage">
-				<a href="listing01232017.html"><%= image_tag("mcmansion.jpg") %></a>
-			</div>
-			
-			<div id="listtext">
-				<h2>
-					$345,000
-				</h2>
-				
-				<br>
-				<p>
-					4 BR 3 BA
-					<br>Nulla non aliquet diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean consequat condimentum laoreet. Proin cursus venenatis leo, non sollicitudin odio condimentum at. Cras ac lectus vestibulum, congue est ac, aliquet metus. Praesent consequat orci enim, sed vestibulum elit venenatis ac. Aliquam rhoncus tempus fringilla. Proin commodo porta libero a blandit. Phasellus aliquam urna pellentesque turpis maximus, ac lobortis erat ultrices. Cras convallis pulvinar arcu. Vestibulum id sem consectetur, semper arcu finibus, vestibulum arcu. Aenean lacus justo, posuere id tellus quis, tristique efficitur ipsum.
-				</p>
-			</div>
-		</div>
+		<ol class="listings">
+			<%= render @listings %>
+		</ol>
 	</div>
 	
 	<div id="sectionbanner">

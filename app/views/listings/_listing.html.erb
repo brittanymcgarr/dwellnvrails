@@ -1,0 +1,39 @@
+
+<li id="listing-<%= listing.id %>">
+
+  <div id="listing">
+      <div id="listimage">
+          <!-- STUB : Put main_image here when moved in -->
+          <% if listing.picture? %>
+            <%= link_to image_tag(listing.picture.url), listing %>
+          <% else %>
+            <%= link_to image_tag("cabin.jpg"), listing %>
+          <% end %>
+      </div>
+      
+      <div id="listtext">
+        <br>
+        <h2>
+            <!-- STUB: Listing asking price -->
+        	$200,000
+        </h2>
+        
+        <h3>
+            Listed <%= time_ago_in_words(listing.created_at) %> ago
+        </h3>
+        
+        <p>
+            <%= listing.description %>
+        </p>
+        
+        <% if current_user?(listing.user) %>
+          <%= link_to "delete", listing, method: :delete, data: { confirm: "Are you sure you want to delete this listing?" } %>
+        <% end %>
+        
+        <% if current_user?(listing.user) %>
+          <%= link_to "Edit", edit_listing_path(listing.id) %>
+        <% end %>
+      </div>
+  </div>
+  
+</li>

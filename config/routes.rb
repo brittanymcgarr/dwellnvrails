@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  # Password reset actions
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   # Users management
   get '/signup', to: 'users#new'
   
+  # Listings management
+  get '/listings/new', to: 'listings#new'
+  
+  get '/listings/edit', to: 'listings#edit'
+  
   # Session controller for Login/Logout
   get    '/login',   to: 'sessions#new'
   
@@ -34,5 +39,6 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :listings
 
 end

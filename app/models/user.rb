@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_many :listings
+    
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
     VALID_PHONE_REGEX = /(\(*(\d{3})\)|(\d{3}-)|(\d{3}))\s*(\d{3})-*(\d{4})/ 
     

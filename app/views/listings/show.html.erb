@@ -1,0 +1,88 @@
+<% provide(:title, "Listing") %>
+
+<div id="content">
+    <div id="splash">
+        <% if @listing.picture? %>
+            <%= image_tag(@listing.picture.url) %>
+          <% else %>
+            <%= image_tag("cabin.jpg", :class => "slides") %>
+        <% end %>
+        
+        <%= image_tag("kitchen.jpg", :class => "slides") %>
+        <%= image_tag("kitchen01.jpg", :class => "slides") %>
+        <%= image_tag("kitchen02.jpg", :class => "slides") %>
+        <%= image_tag("livingroom.jpg", :class => "slides") %>
+        <%= image_tag("bedroom.jpg", :class => "slides") %>
+        <%= image_tag("bathroom.jpg", :class => "slides") %>
+    	
+    	<button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+    	<button class="button-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    
+    <div id="sectionbanner">
+    	<p class="goldtext">
+    		$234,000
+    	</p>
+    </div>
+    
+    <!-- Article -->
+    <div id="article">
+    	
+    	<div id="listingnotes">
+    		<p>
+    		    <%= @listing.description %>
+    		</p>
+    	</div>
+    
+    	<ul id="listingphotos">
+    	    <li><%= image_tag("cabin.jpg") %></li>
+            <li><%= image_tag("kitchen.jpg") %></li>
+            <li><%= image_tag("kitchen01.jpg") %></li>
+            <li><%= image_tag("kitchen02.jpg") %> </li>
+            <li><%= image_tag("livingroom.jpg") %></li>
+            <li><%= image_tag("bedroom.jpg") %></li>
+            <li><%= image_tag("bathroom.jpg") %></li>
+    	</ul>
+    
+    </div>
+    
+    <div id="sectionbanner">
+    	<p class="goldtext">
+    		Contact Us Today!
+    	</p>
+    </div>
+    
+    <!-- Wrapper for the contact panel -->
+    <div id="contact">
+    	<div id="contacttext">
+    		<ul>
+    			<li>Phone: (775) 830-6036</li>
+    			<li>Address: 4950 Kietzke Lane STE #302-A, Reno, NV 89509</li>
+    			<li>Email: michelle@dwellNV.com</li>
+    		</ul>
+    	</div>
+    	
+    	<!-- Media icons -->
+    	<div id="media">
+    		<ul>
+    			<li>
+    				<a href="#">
+    					<%= image_tag("twitter.png") %>
+    				</a>
+    			</li>
+    			
+    			<li>
+    				<a href="#">
+    					<%= image_tag("facebook.png") %>
+    				</a>
+    			</li>
+    			
+    			<li>
+    				<a href="#">
+    					<%= image_tag("instagram.png") %>
+    				</a>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<% provide(:title, 'Create Listing') %>
+
+<div id="content">
+    
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Create a New Listing
+		</p>
+	</div>
+	
+	<!-- Article -->
+	<div id="article">
+		
+		<div class="form">
+			<%= form_for(@listing, html: { mulipart: true}) do |form| %>
+				<%= render 'shared/error_messages_listings' %>
+	
+				<%= form.label :street_address %>
+				<br>
+				<%= form.text_field :street_address, class: 'form-control' %>
+	
+				<br>
+				<%= form.label :city %>
+				<br>
+				<%= form.text_field :city, class: 'form-control' %>
+				
+				<br>
+				<%= form.label :state %>
+				<br>
+				<%= form.text_field :state, class: 'form-control' %>
+	
+				<br>
+				<%= form.label :zip_code %>
+				<br>
+				<%= form.text_field :zip_code, class: 'form-control' %>
+	
+				<br>
+				<%= form.label :primary_contact %>
+				<br>
+				<%= form.text_field :primary_contact, class: 'form-control' %>
+				
+				<br>
+				<%= form.label :secondary_contact %>
+				<br>
+				<%= form.text_field :secondary_contact, class: 'form-control' %>
+				
+				<br>
+				<%= form.label :description %>
+				<br>
+				<%= form.text_area :description, placeholder: "Details of the lot, rules, etc..." %>
+				
+				
+	
+				<br>
+				<%= form.submit "Create Listing", class: "button" %>
+				<br>
+				<span class="picture">
+					<%= form.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
+				</span>
+			<% end %>
+		</div>
+		
+	</div>
+    
+</div>
