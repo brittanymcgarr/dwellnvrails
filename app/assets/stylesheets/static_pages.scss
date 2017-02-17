@@ -241,18 +241,32 @@ ul, ol {
 }
 
 #teammember {
-	padding: 20px;
+	padding: 10px;
+}
+
+#teamarticle {
+	max-width: 65%;
+	float: left;
 	text-align: center;
 }
 
+#teamarticle h3 {
+	font-size: 21px;
+}
+
 #teammember img {
+	height: 85%;
+	max-height: 450px;
+	max-width: 30%;
 	display: block;
 	margin: 0 auto;
+	margin-right: 20px;
 	padding: 5px;
 	border: 5px solid white;
 	border-radius: 5px;
 	box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 	background-color: white;
+	float: right;
 }
 
 #teammember h2 {
@@ -313,10 +327,16 @@ ul, ol {
 #article {
 	padding: 35px;
 	overflow: scroll;
+	text-align: center;
 }
 
 #article::-webkit-scrollbar {
 	display: none;
+}
+
+#articlemission {
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 #listingphotos ul {

@@ -3,7 +3,7 @@
 <div id="content">
     <div id="splash">
         <% if @listing.picture? %>
-            <%= image_tag(@listing.picture.url) %>
+            <%= image_tag(@listing.picture.url, :class => "slides") %>
           <% else %>
             <%= image_tag("cabin.jpg", :class => "slides") %>
         <% end %>
