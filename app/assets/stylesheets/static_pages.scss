@@ -2,7 +2,6 @@
 body, html{
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased !important;
-	font-size: 16px;
 	min-height: 100%;
 	min-width: 100%;
 	margin: 0;
@@ -22,12 +21,12 @@ h1 strong{
 
 h2{
 	text-transform: uppercase;
-	line-height: 20px;
+	line-height: 18px;
 	margin:  0;
 }
 
 h3{
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 900;
 }
 
@@ -43,7 +42,7 @@ h5{
 
 p{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 ul, ol {
@@ -53,6 +52,16 @@ ul, ol {
 	font-size: 16px;
 }
 
+a {
+	text-decoration: none;
+	font-size: 14px;
+}
+
+a:hover {
+	background: none;
+	color: #BF9603;
+}
+
 .goldtext {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -60,6 +69,8 @@ ul, ol {
 	-webkit-margin-before: 0.3em; 
 	-webkit-margin-after: 0.2em;
 	background-image: -webkit-linear-gradient(#E8D800, #E0CF00 52%, #A86800 55%, #A86800 );
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#E8D800, EndColorStr=#E0CF00);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#E8D800, EndColorStr=#E0CF00)";
 	text-shadow: -0.02em -0.03em 0.005em rgba(255, 255, 0, 0.56);
 	font-size: 25px;
 }
@@ -128,10 +139,11 @@ ul, ol {
 	color: white;
 	text-align: center;
 	padding-left: 25px;
-	padding-right: 50px;
+	padding-right: 20px;
 	padding-top: 45px;
 	text-decoration: none;
 	font-size: 20px;
+	font-weight: 200;
 }
 
 .navoptions a:hover {
@@ -504,6 +516,10 @@ textarea {
 	font-size: 15px;
 }
 
+form label {
+	font-size: 24px;
+}
+
 .button {
 	width: 225px;
     background-color: #494949;
@@ -514,7 +530,7 @@ textarea {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
     margin: 4px;
     cursor: pointer;
     border-radius: 3px;
@@ -549,20 +565,15 @@ textarea {
 }
 
 .checkbox {
-	width: 30px;
+	width: 530px;
 	height: 30px;
   margin: 0;
   padding: 10px;
   span {
-    margin-left: 20px;
-    font-weight: normal;
+    font-size: 14px;
   }
 }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
 
 /* User Listings styling */
 
