@@ -14,7 +14,10 @@
 	
 	<!-- Wrapper for the listings panel -->
 	<div id="listings">
-	
+			<ol class="listings">
+				<%= render @renobblistings %>
+			</ol>
+			<%= will_paginate @renobblistings %>
 		
 	</div>
 	

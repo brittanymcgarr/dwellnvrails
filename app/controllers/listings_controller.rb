@@ -67,7 +67,7 @@ class ListingsController < ApplicationController
     def listing_params
         params.require(:listing).permit(:description, :street_address, :city, :state,
                                         :zip_code, :primary_contact, :secondary_contact,
-                                        :listing_status, :asking_price, :picture)
+                                        :listing_status, :asking_price, :renobb, :picture)
     end
     
     # Ensure only the creator of the listing is destroying it

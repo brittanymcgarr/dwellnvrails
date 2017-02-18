@@ -18,7 +18,7 @@ class StaticPagesController < ApplicationController
                             .all.where.not("listing_status LIKE ?", "deleted").paginate(page: params[:page])
     @southlistings = Listing.where(zip_code: ['89519', '89502', '89511', '89521'])
                             .all.where.not("listing_status LIKE ?", "deleted").paginate(page: params[:page])
-    # @pricelistings = Listing.order(:asking_price).first(3).paginate(page: params[:page])
+    @renobblistings = Listing.all.where(:renobb => true).where.not("listing_status LIKE ?" , "deleted").paginate(page: params[:page])
   end
 
 end
