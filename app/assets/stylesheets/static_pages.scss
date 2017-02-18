@@ -327,7 +327,6 @@ ul, ol {
 #article {
 	padding: 35px;
 	overflow: scroll;
-	text-align: center;
 }
 
 #article::-webkit-scrollbar {
@@ -337,6 +336,7 @@ ul, ol {
 #articlemission {
 	padding-left: 30px;
 	padding-right: 30px;
+	text-align: center;
 }
 
 #listingphotos ul {
@@ -533,12 +533,15 @@ textarea {
 }
 
 .alert {
-	width: 50%;
+	width: 97%;
 	height: 32px;
-	background-color: #FFDCD8;
+	background-color: black;
+	color: white;
+	text-align: center;
 	border-radius: 3px;
 	border: 1px solid red;
 	margin: 5px;
+	padding: 10px;
 	font-size: 24px;
 }
 

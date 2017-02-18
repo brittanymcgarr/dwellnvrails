@@ -21,7 +21,11 @@
     
     <div id="sectionbanner">
     	<p class="goldtext">
-    		$234,000
+            <% if @listing.asking_price %>
+              $<%= number_with_delimiter(@listing.asking_price, :delimiter => ',')  %>
+            <% else %>
+              Contact Us for Pricing
+            <% end %>
     	</p>
     </div>
     

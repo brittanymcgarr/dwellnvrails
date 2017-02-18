@@ -13,10 +13,15 @@
       
       <div id="listtext">
         <br>
-        <h2>
-            <!-- STUB: Listing asking price -->
-        	$200,000
-        </h2>
+          <% if listing.asking_price %>
+            <h2>
+              $<%= number_with_delimiter(listing.asking_price, :delimiter => ',')  %>
+            </h2>
+          <% else %>
+            <h3>
+              Contact Us for Pricing
+            </h3>
+          <% end %>
         
         <h3>
             Listed <%= time_ago_in_words(listing.created_at) %> ago
