@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218200233) do
+ActiveRecord::Schema.define(version: 20170220191721) do
 
   create_table "galleries", force: :cascade do |t|
     t.integer  "listing_id"
@@ -33,11 +33,20 @@ ActiveRecord::Schema.define(version: 20170218200233) do
     t.datetime "updated_at",        null: false
     t.string   "main_image"
     t.string   "picture"
-    t.         "gallery"
     t.integer  "asking_price"
     t.boolean  "renobb"
     t.index ["user_id", "created_at"], name: "index_listings_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_listings_on_user_id"
+  end
+
+  create_table "relationship_listings", force: :cascade do |t|
+    t.integer  "follower_id"
+    t.integer  "listing_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["follower_id", "listing_id"], name: "index_relationship_listings_on_follower_id_and_listing_id", unique: true
+    t.index ["follower_id"], name: "index_relationship_listings_on_follower_id"
+    t.index ["listing_id"], name: "index_relationship_listings_on_listing_id"
   end
 
   create_table "users", force: :cascade do |t|
