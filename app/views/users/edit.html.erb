@@ -51,6 +51,11 @@
 					<%= form.check_box :team %>
 					
 					<br>
+					<%= form.label :biography %>
+					<br>
+					<%= form.text_area :biography, placeholder: "Tell our wondeful clients about yourself..." %>
+					
+					<br>
 					<span class="picture">
 						<%= form.file_field :portrait %>
 					</span>

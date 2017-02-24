@@ -37,29 +37,36 @@
 	</div>
 	
 	<!-- Wrapper for the team panel -->
-	<div id="team">
-		<div id="teammember">
-			<%= image_tag("02-Michelle-Ward.jpg") %>
+	<div id="teamabout">
 		
-			<div id="teamarticle">
-				<h2>
-					Michelle Ward
-				</h2>
+		<% @realtors.each do |realtor| %>
+			<div id="teamprofile">
+				<div id="teamcontact">
+					<h2>
+						<%= realtor.name %>
+					</h2>
+					
+					<% if realtor.name == "Michelle Ward" %>
+						<h3>
+							Broker - Owner
+							<br>
+							dwellNV
+						</h3>
+					<% end %>
+					
+					<%= realtor.biography %>
+				</div>
 				
-				<h3>
-					Broker - Owner
-					<br>
-					dwellNV
-				</h3>
-				
-				<p>
-					Growing up, my family had a home in the Lake Tahoe area. It started a lifelong love affair with the area that continues to this day. From the snowy slopes of Tahoe to the vibrant, emerging communities in the valley, Reno has witnessed an incredible transformation. I am thrilled to be your guide to the area as we grow our community.
-				</p>
-				<p>
-					Real estate is an adaptive and challenging market, and it has been a wonderful avenue for meeting new people. From closing my first home to attaining my broker's license, my enthusiasm has only grown. The reward of seeing happy homeowners is self-evident, but I also understand that the intricacies of market knowledge coupled with deft negotiation are important factors in securing your portfolio goals. I hope I can lend my skills in your search.
-				</p>
+				<div id="teamportrait">
+					<% if realtor.portrait.url != nil %>
+						<%= image_tag(realtor.portrait.url) %>
+					<% else %>
+						<%= image_tag 'renosign.jpg' %>
+					<% end %>
+				</div>
 			</div>
-		</div>
+		<% end %>
+		
 	</div>
 	
 	<div id="sectionbanner">

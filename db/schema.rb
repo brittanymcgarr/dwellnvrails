@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224024407) do
+ActiveRecord::Schema.define(version: 20170224040704) do
 
   create_table "listings", force: :cascade do |t|
     t.text     "description"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20170224024407) do
     t.datetime "reset_sent_at"
     t.string   "portrait"
     t.boolean  "team",              default: false
+    t.text     "biography"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
