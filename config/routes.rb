@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :testimonials
   # Password reset actions
   get 'password_resets/new'
 

@@ -1,18 +1,22 @@
 class StaticPagesController < ApplicationController
   def home
     @listings = Listing.all.where.not("listing_status LIKE ?", "deleted").first(3)
+    @testimonial = Testimonial.order("RANDOM()").first
   end
 
   def contact
     @realtors = User.where('team = ?', true).order("created_at").all
+    @testimonial = Testimonial.order("RANDOM()").first
   end
   
   def about
     @realtors = User.where('team = ?', true).order("created_at").all
+    @testimonial = Testimonial.order("RANDOM()").first
   end
   
   def listings
     @listings = Listing.all.where.not("listing_status LIKE ?", "deleted").paginate(page: params[:page])
+    @testimonial = Testimonial.order("RANDOM()").first
   end
 
   def renobb
@@ -21,6 +25,7 @@ class StaticPagesController < ApplicationController
     @southlistings = Listing.where(zip_code: ['89519', '89502', '89511', '89521'])
                             .all.where.not("listing_status LIKE ?", "deleted").paginate(page: params[:page])
     @renobblistings = Listing.all.where(:renobb => true).where.not("listing_status LIKE ?" , "deleted").paginate(page: params[:page])
+    @testimonial = Testimonial.order("RANDOM()").first
   end
 
 end

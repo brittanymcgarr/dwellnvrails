@@ -1,0 +1,37 @@
+<% provide(:title, 'Edit Testimonial') %>
+
+<div id="content">
+    
+	<div id="sectionbanner">
+		<p class="goldtext">
+			Edit a Testimonial
+		</p>
+	</div>
+
+	<div id="article">
+		<% if current_user.admin? %>
+			<div class="form">
+				<%= form_for(@testimonial, html: { mulipart: true}) do |form| %>
+					<%= render 'shared/error_messages_listings' %>
+					
+					<br>
+					<%= form.label :description %>
+					<br>
+					<%= form.text_area :description, placeholder: "Details of the lot, rules, etc..." %>
+					
+					<br>
+					<span class="image">
+						<%= form.file_field :image, accept: 'image/jpeg, image/gif, image/png' %>
+					</span>
+		
+					<br>
+					<%= form.submit "Update Testimonial", class: "button" %>
+				<% end %>
+			</div>
+		<% else %>
+			<h2>
+				We're sorry. Only admins may view this form.
+			</h2>
+		<% end %>
+	</div>
+</div>

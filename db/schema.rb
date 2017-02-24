@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224040704) do
+ActiveRecord::Schema.define(version: 20170224055015) do
 
   create_table "listings", force: :cascade do |t|
     t.text     "description"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20170224040704) do
     t.index ["follower_id", "listing_id"], name: "index_relationship_listings_on_follower_id_and_listing_id", unique: true
     t.index ["follower_id"], name: "index_relationship_listings_on_follower_id"
     t.index ["listing_id"], name: "index_relationship_listings_on_listing_id"
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

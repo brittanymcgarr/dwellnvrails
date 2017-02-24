@@ -3,7 +3,19 @@
 	
 	<!-- View panel for the splash image -->
 	<div id="splash">
-		<%= image_tag("balloon.jpg") %>
+		<div id="testimonial">
+			<% if @testimonial.description != nil %>
+				<%= simple_format(@testimonial.description) %>
+			<% end %>
+			
+			<% if @testimonial.image %>
+				<%= image_tag(@testimonial.image.url) %>
+			<% end %>
+		</div>
+		
+		<div id="splashimage">
+			<%= image_tag("balloon.jpg") %>
+		</div>
 	</div>
 	
 	<div id="sectionbanner">
