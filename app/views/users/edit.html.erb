@@ -39,6 +39,23 @@
 				<br>
 				<%= form.password_field :password_confirmation, class: 'form-control' %>
 	
+				<% if current_user.admin? %>
+					<br>
+					<%= form.label :admin %>
+					<br>
+					<%= form.check_box :admin %>
+					
+					<br>
+					<%= form.label :team %>
+					<br>
+					<%= form.check_box :team %>
+					
+					<br>
+					<span class="picture">
+						<%= form.file_field :portrait %>
+					</span>
+				<% end %>
+				
 				<br>
 				<%= form.submit "Update Profile", class: "button" %>
 			<% end %>

@@ -47,23 +47,30 @@
 	
 	<!-- Wrapper for the team panel -->
 	<div id="team">
-		<div id="teammember">
-			<%= image_tag("mward.png") %>
 		
-			<h2>
-				Michelle Ward
-			</h2>
-			
-			<p>
-				<h3>
-					Phone:
-					(775) 830-6036
-					<br>
-					Email:
-					michelle@dwellNV.com
-				</h3>
-			</p>
-		</div>
+		<% @realtors.each do |realtor| %>
+			<div id="teamprofile">
+				<div id="teamcontact">
+					<h2>
+						<%= realtor.name %>
+					</h2>
+					
+					<h3>
+						Phone:
+						<%= realtor.primary_phone %>
+					
+						<br>
+						Email:
+						<%= realtor.email %>
+					</h3>
+				</div>
+				
+				<div id ="teamportrait">
+					<%= image_tag(realtor.portrait.url) %>
+				</div>
+			</div>
+		<% end %>
+		
 	</div>
 	
 	<div id="sectionbanner">

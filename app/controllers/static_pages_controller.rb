@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    @realtors = User.where('team = ?', true).order("created_at").all
   end
   
   def about

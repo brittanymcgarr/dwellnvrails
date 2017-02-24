@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220191721) do
-
-  create_table "galleries", force: :cascade do |t|
-    t.integer  "listing_id"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20170224024407) do
 
   create_table "listings", force: :cascade do |t|
     t.text     "description"
@@ -31,7 +24,6 @@ ActiveRecord::Schema.define(version: 20170220191721) do
     t.integer  "user_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.string   "main_image"
     t.string   "picture"
     t.integer  "asking_price"
     t.boolean  "renobb"
@@ -63,6 +55,8 @@ ActiveRecord::Schema.define(version: 20170220191721) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.string   "portrait"
+    t.boolean  "team",              default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

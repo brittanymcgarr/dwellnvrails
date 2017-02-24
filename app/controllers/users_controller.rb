@@ -34,12 +34,17 @@ class UsersController < ApplicationController
   # Update the user's data
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      # User update was successful, no action necessary
-      flash[:success] = "Updated profile information"
-      redirect_to @user
+    
+    if current_user.admin? || current_user == @user
+      if @user.update_attributes(user_params)
+        # User update was successful, no action necessary
+        flash[:success] = "Updated profile information"
+        redirect_to @user
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      render 'show'
     end
   end
   
@@ -64,13 +69,14 @@ class UsersController < ApplicationController
   private
     # Confirms valid user parameters
     def user_params
-      params.require(:user).permit(:name, :email, :primary_phone, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :primary_phone, :password, :password_confirmation,
+                                   :admin, :portrait, :team)
     end
     
     # Ensure accessing users is correct user
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless (current_user?(@user) || current_user.admin?)
     end
     
     # Confirms user admin status

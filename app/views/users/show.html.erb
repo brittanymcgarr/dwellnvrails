@@ -10,19 +10,29 @@
 		
 		<div id="article">
 			<!-- Add user information when refined -->
-			<h2>
-				Primary Phone:
-			</h2>
-			<p>
-				<%= @user.primary_phone %>
-			</p>
+			<div id="userprofile">
+				<h2>
+					Primary Phone:
+				</h2>
+				<p>
+					<%= @user.primary_phone %>
+				</p>
+				
+				<h2>
+					Email:
+				</h2>
+				<p>
+					<%= @user.email %>
+				</p>
+			</div>
 			
-			<h2>
-				Email:
-			</h2>
-			<p>
-				<%= @user.email %>
-			</p>
+			<% if @user.portrait? %>
+				<div id="portrait">
+					
+					<%= image_tag @user.portrait.url %>
+					
+				</div>
+			<% end %>
 			
 			<br>
 			<%= link_to "Edit", edit_user_path(current_user) %>
