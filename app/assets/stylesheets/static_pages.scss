@@ -250,7 +250,7 @@ a:hover {
 }
 
 #team {
-	height: 33%;
+	min-height: 33%;
 	width: 100%;
 	padding: 10px;
 	overflow: hidden;
@@ -258,6 +258,8 @@ a:hover {
 
 #teamabout #teamprofile {
 	max-width: 90%;
+	height: 350px;
+	padding-bottom: 10px;
 }
 
 #teamabout #teamcontact {

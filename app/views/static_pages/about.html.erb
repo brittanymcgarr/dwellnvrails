@@ -54,7 +54,9 @@
 						</h3>
 					<% end %>
 					
-					<%= realtor.biography %>
+					<% if realtor.biography != nil %>
+						<%= simple_format(realtor.biography) %>
+					<% end %>
 				</div>
 				
 				<div id="teamportrait">
