@@ -2,7 +2,6 @@ class RemoveColumnsFromListings < ActiveRecord::Migration[5.0]
 
   def change
     remove_column :listings, :main_image
-    remove_column :listings, :gallery
     remove_column :listings, :image_1
     remove_column :listings, :image_2
     remove_column :listings, :image_3
