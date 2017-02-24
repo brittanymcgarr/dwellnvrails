@@ -2,18 +2,13 @@
 
 <div id="content">
     <div id="splash">
-        <% if @listing.picture? %>
-            <%= image_tag(@listing.picture.url, :class => "slides") %>
-          <% else %>
-            <%= image_tag("cabin.jpg", :class => "slides") %>
-        <% end %>
-        
-        <%= image_tag("kitchen.jpg", :class => "slides") %>
-        <%= image_tag("kitchen01.jpg", :class => "slides") %>
-        <%= image_tag("kitchen02.jpg", :class => "slides") %>
-        <%= image_tag("livingroom.jpg", :class => "slides") %>
-        <%= image_tag("bedroom.jpg", :class => "slides") %>
-        <%= image_tag("bathroom.jpg", :class => "slides") %>
+        <div id="splashimage">
+          <% if @listing.picture? %>
+              <%= link_to image_tag(@listing.picture.url, :class => "slides"), @listing.picture.url %>
+            <% else %>
+              <%= image_tag("cabin.jpg", :class => "slides") %>
+          <% end %>
+        </div>
     	
     	<button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
     	<button class="button-right" onclick="plusDivs(1)">&#10095;</button>
@@ -39,13 +34,11 @@
     	</div>
     
     	<ul id="listingphotos">
-    	    <li><%= image_tag("cabin.jpg") %></li>
-            <li><%= image_tag("kitchen.jpg") %></li>
-            <li><%= image_tag("kitchen01.jpg") %></li>
-            <li><%= image_tag("kitchen02.jpg") %> </li>
-            <li><%= image_tag("livingroom.jpg") %></li>
-            <li><%= image_tag("bedroom.jpg") %></li>
-            <li><%= image_tag("bathroom.jpg") %></li>
+    	    <% if @listing.picture? %>
+              <li><%= link_to image_tag(@listing.picture.url, :class => "slides"), @listing.picture.url %></li>
+            <% else %>
+              <li><%= image_tag("cabin.jpg", :class => "slides") %></li>
+          <% end %>
     	</ul>
     
     </div>
