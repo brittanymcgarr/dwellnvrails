@@ -29,7 +29,7 @@
     	
     	<div id="listingnotes">
     		<p>
-    		    <%= @listing.description %>
+    		    <%= @listing.description.html_safe %>
     		</p>
     	</div>
     
@@ -38,6 +38,14 @@
               <li><%= link_to image_tag(@listing.picture.url, :class => "slides"), @listing.picture.url %></li>
             <% else %>
               <li><%= image_tag("cabin.jpg", :class => "slides") %></li>
+          <% end %>
+          
+          <% if current_user?(@listing.user) || @user.admin? %>
+            <%= link_to "delete", @listing, method: :delete, data: { confirm: "Are you sure you want to delete this listing?" } %>
+          <% end %>
+          
+          <% if current_user?(@listing.user) || @user.admin? %>
+            <%= link_to "Edit", edit_listing_path(@listing.id) %>
           <% end %>
     	</ul>
     
